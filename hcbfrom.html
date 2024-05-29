@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Courier New", Courier, monospace;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #7ed4a5, #be5cba);
+      }
+      form {
+        background-color: rgb(164, 168, 182);
+        width: 25rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        background: rgb(164, 168, 182);
+        box-shadow: 0 8px 32px 0;
+        border-radius: 20px;
+        border-left: 1px solid;
+        border-top: 1px solid;
+      }
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 3px;
+      }
+      label {
+        font-size: 20px;
+        color: white;
+        margin-left: 10%;
+        opacity: 8;
+      }
+      input {
+        width: 80%;
+        margin: 5% auto;
+        margin-bottom: 8%;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: white;
+        border-bottom: 1px solid;
+        opacity: 0.8;
+      }
+      button {
+        width: 50%;
+        margin: 3% auto;
+        color: white;
+        font-size: 15px;
+        opacity: 0.8;
+        background: rgb(22, 66, 66);
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        text-shadow: 2px 2px 4px;
+        box-shadow: 3px 3px 4px;
+        border-left: 1px solid;
+        border-top: 1px solid;
+      }
+      a {
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        opacity: 8;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Login</h1>
+      <label>Username</label>
+      <input type="text" />
+      <label>Possword</label>
+      <input type="password" />
+      <button>Login</button>
+      <a>Forgat Possword</a>
+    </form>
+  </body>
+</html>
