@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Gradient</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(
+          300deg,
+          rgb(19, 107, 136),
+          rgb(206, 142, 233),
+          rgb(155, 155, 247),
+          #c20c0c
+        );
+      }
+      .loader {
+        height: 400px;
+        width: 400px;
+        background: red;
+        border-radius: 200px;
+        background: linear-gradient(
+          300deg,
+          deepskyblue,
+          darkviolet,
+          blue,
+          #c20c0c
+        );
+        background-size: 240% 240%;
+        animation: gradient-animation 24s ease infinite;
+        -webkit-box-shadow: -5px 7.5px 25px 13px #dddddd;
+        -moz-box-shadow: -5px 7.5px 25px 13px #dddddd;
+        box-shadow: -5px 7.5px 25px 13px #dddddd;
+        animation: spin 1.4s linear infinite;
+      }
+      h1 {
+        margin: 10px;
+      }
+      .loader::before {
+        position: absolute;
+        content: "";
+        height: 350px;
+        width: 350px;
+        background-color: rgb(78, 69, 69);
+        border-radius: 50%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -59%);
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Animated Gradient Color Spinner</h1>
+    <div class="loader"></div>
+  </body>
+</html>
