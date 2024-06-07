@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon propect</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(341deg, #354a3e, #588aa1, #c46d7a, #83a797);
+        background-size: 240% 240%;
+        animation: gradient-animation 32s ease infinite;
+      }
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      h3 {
+        color: black;
+        font-size: 150px;
+        cursor: pointer;
+        transition: 0.5s;
+        animation: glo 0.9s ease infinite;
+      }
+      /*h3:hover {
+        color: white;
+        text-shadow: 0 0 5px skyblue, 0 0 25px skyblue, 0 0 75px skyblue,
+          0 0 100px skyblue;
+      }*/
+      @keyframes glo {
+        from {
+          color: black;
+        }
+        to {
+          color: white;
+          text-shadow: 0 0 5px skyblue, 0 0 25px skyblue, 0 0 75px skyblue,
+            0 0 100px skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Neon propate</h3>
+  </body>
+</html>
