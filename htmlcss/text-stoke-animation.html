@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Stoke</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Courier New", Courier, monospace;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        background: linear-gradient(300deg, #ef3d3d, #8d53be, #d1bee1);
+        background-size: 180% 180%;
+        animation: gradient-animation 18s ease infinite;
+      }
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .text {
+        font-size: 30px;
+        color: rgb(22, 9, 9);
+        display: inline-block;
+        -webkit-text-stroke-width: 1px;
+        position: relative;
+      }
+      .text::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: attr(data-letters);
+        overflow: hidden;
+      }
+      .text.top::before {
+        color: aqua;
+        transition: 1s ease-in-out;
+        height: 0;
+        z-index: 1;
+      }
+      .text.top:hover::before {
+        height: 100%;
+      }
+      .text.bottom::before {
+        transition: 1s ease-in-out;
+        color: rgb(218, 29, 29);
+        height: 100%;
+        z-index: 1;
+      }
+      .text.bottom:hover::before {
+        height: 0;
+      }
+      .text.left::before {
+        transition: 1s ease-in-out;
+        color: rgb(142, 196, 56);
+        width: 0;
+        z-index: 1;
+      }
+      .text.left:hover::before {
+        width: 100%;
+      }
+      .text.right::before {
+        transition: 1s ease-in-out;
+        color: rgb(81, 118, 219);
+        width: 100%;
+        z-index: 999;
+      }
+      .text.right:hover::before {
+        width: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text top" data-letters="Text Stoke Animation">
+      Text Stoke Animation
+    </h1>
+    <h1 class="text bottom" data-letters="Text Stoke Animation">
+      Text Stoke Animation
+    </h1>
+    <h1 class="text right" data-letters="Text Stoke Animation">
+      Text Stoke Animation
+    </h1>
+
+    <h1 class="text left" data-letters="Text Stoke Animation">
+      Text Stoke Animation
+    </h1>
+  </body>
+</html>

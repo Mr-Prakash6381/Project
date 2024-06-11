@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Checkbox</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      :root {
+        --wrong: rgba(250, 151, 114, 0.376);
+        --correct: rbga(111, 238, 111, 0.376);
+        --wrong-text: rbga(4, 105, 34);
+        --correct-text: rgb(4, 105, 4);
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+      h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+      .form-checkbox {
+        display: block;
+
+        user-select: none;
+      }
+      .input-checkbox input[type="checkbox"] {
+        appearance: none;
+        height: 30px;
+        width: 30px;
+        border-radius: 3px;
+        border: 2px solid gray;
+      }
+      .input-checkbox lable {
+        font-size: 20px;
+        margin-left: 12px;
+        font-weight: 60px;
+      }
+      .input-checkbox {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        gap: 10px;
+      }
+      .input-checkbox input[type="checkbox"] :checked::before {
+        content: "";
+        font-weight: 700;
+        font-size: 26px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .correct-checkbox input[type=":checked"] :checked::before {
+        content: "\2713";
+        color: var(--correct-text);
+      }
+      .wrong-checkbox input[type=":checked"] :checked::before {
+        content: "\2715";
+        color: var(--wrong-text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Custom Checkbox</h1>
+      <div class="form-checkbox">
+        <div class="input-checkbox correct-checkbox">
+          <input type="checkbox" id="correct" checked />
+          <label for="correct">Correct Answer</label>
+        </div>
+        <div class="input-checkbox wrong-checkbox">
+          <input type="checkbox" id="wrong" checked />
+          <label for="wrong">wrong Answer</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
