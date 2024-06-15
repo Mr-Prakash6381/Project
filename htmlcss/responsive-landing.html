@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+      }
+      section {
+        height: 100vh;
+        width: 100%;
+      }
+      .header {
+        background: linear-gradient(76deg, #e7cac6, #9cebd0, #5de4c2, #2363f0);
+        background-size: 240% 240%;
+        animation: gradient-animation 32s ease infinite;
+        position: relative;
+      }
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px;
+        align-items: baseline;
+      }
+      .header .navbar ul {
+        display: flex;
+        list-style: none;
+      }
+      .header .Logo {
+        text-transform: uppercase;
+        color: white;
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1px;
+      }
+      .header .Logo span {
+        font-weight: 800;
+        color: black;
+      }
+      .header .navbar ul li {
+        padding: 10px 30px;
+      }
+      .header .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: 0.5s;
+      }
+      .header .navbar ul li:hover a {
+        color: red;
+      }
+      .header .navbar ul li.link-btn:hover {
+        color: red;
+        background: white;
+      }
+      .link-btn {
+        background-color: red;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      .header .banner {
+        color: white;
+        position: absolute;
+        left: 0;
+        top: 150px;
+        word-wrap: wrap;
+        width: 70%;
+
+        padding-left: 10px;
+      }
+      .header .banner h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .header .banner h1 span {
+        font-weight: 800;
+        color: black;
+      }
+      .header .banner p {
+        margin: 20px 0;
+      }
+      .header .services {
+        position: absolute;
+        background-color: rgb(190, 212, 224);
+        left: 0;
+        bottom: 0;
+        width: 900px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .header .services .service {
+        padding: 20px;
+      }
+      .header .services .service h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .header .services .service p {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      .header .services .service a {
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .service:nth-child(1) {
+        background-color: #26282c;
+      }
+      .service:nth-child(1) h3,
+      .service:nth-child(1) a {
+        color: white;
+      }
+
+      .service:nth-child(2) {
+        background-color: #e4e4e4;
+      }
+      .service:nth-child(3) {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header" id="header">
+      <nav>
+        <div class="Logo"><span>ARCH</span>TECH</div>
+        <div class="navbar">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Trend">Trend</a></li>
+            <li><a href="#Feature">Feature</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li class="link-btn"><a href="#">Sing Up</a></li>
+          </ul>
+        </div>
+        <button class="btn-show">
+          <span class="bar"> </span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+      <div class="banner">
+        <h1>Phliosophy <span>Architecture</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+          adipisci dolor deleniti accusantium, voluptatem non vero hic laborum
+          sequi accusamus iure, eveniet repellat dicta tempora repellendus quas.
+          Illo, inventore repellendus.
+        </p>
+        <a href="#" class="link-btn">See All</a>
+      </div>
+      <div class="services">
+        <div class="service">
+          <h3>Architectural Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            temporibus explicabo nulla, eligendi iste ut laudantium consequatur
+            iusto esse amet?
+          </p>
+          <a href="#">Sell All</a>
+        </div>
+        <div class="service">
+          <h3>Interial Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            temporibus explicabo nulla, eligendi iste ut laudantium consequatur
+            iusto esse amet?
+          </p>
+          <a href="#">Sell All</a>
+        </div>
+        <div class="service">
+          <h3>Preparing & Execution</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            temporibus explicabo nulla, eligendi iste ut laudantium consequatur
+            iusto esse amet?
+          </p>
+          <a href="#">Sell All</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

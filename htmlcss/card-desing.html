@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Desing</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      body {
+        background-color: cornsilk;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .course {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        width: 700px;
+        overflow: hidden;
+        display: flex;
+      }
+      .course h6 {
+        opacity: 0.6;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .course h2 {
+        letter-spacing: 1px;
+        margin: 10px 0;
+        font-weight: 500;
+      }
+      .course-preview {
+        background-color: #e94408;
+        color: white;
+        padding: 30px;
+        max-width: 250px;
+      }
+      .course-preview a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        opacity: 0.6;
+        margin-top: 30px;
+      }
+      .course-info {
+        padding: 30px;
+        width: 100%;
+        position: relative;
+      }
+
+      .progress {
+        background-color: #ddd;
+        height: 5px;
+        width: 100%;
+        border-radius: 3px;
+      }
+      .progress-text {
+        position: absolute;
+        font-size: 10px;
+        top: 30px;
+        right: 30px;
+        right: 30px;
+        text-align: right;
+        width: 150px;
+      }
+      .btn {
+        background-color: #e94408;
+        border: 0;
+        border-radius: 50px;
+        color: white;
+        padding: 12px 25px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="courses-container">
+      <div class="course">
+        <div class="course-preview">
+          <h6>Course</h6>
+          <h2>Web Development</h2>
+          <a href="#">View all chapter</a>
+        </div>
+        <div class="course-info">
+          <div class="progress-container">
+            <div class="porogress"></div>
+
+            <h6>Chapter 1</h6>
+            <h2>HTML & Basic</h2>
+            <button class="btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
